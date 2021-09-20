@@ -5,6 +5,7 @@
 ### Langat Tito Kipkirui
 
 ## Description
+This is web app that display pitches created by users of the software. One can add ,vote  and comment on any pitch . There three categories of pitch sport , business , and politics
 
 ## Setup and Installation instructions
 To have a copy of this project, you can clone it from my github account using these steps;
