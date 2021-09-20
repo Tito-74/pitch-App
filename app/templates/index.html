@@ -1,3 +1,104 @@
 {% extends 'base.html'%}
-{%block content%}
+{% import 'macros.html' as macro%}
+{%block styles%}
+{{super()}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 {%endblock%}
+{% block content%}
+<style>
+    .imp {
+        background-color: #f7f7e7ea;
+    }
+    #hr1 {
+        border-top: 2px solid black !important;
+    }
+    hr {
+        border-top: 0px solid #E0DFDF !important;
+        padding: 0;
+        margin-top: 0.5em !important;
+        border-width: 6px !important;
+        width: 100%;
+    }
+</style>
+<div class="container">
+    <div>
+        <h2 style="text-align:center;font-family: 'Open Sans', sans-serif;font-size:30px;font-weight: 900;color:tomato">
+            {{title}}</h2>
+        <hr id="hr1">
+        <p style="text-align:center;font-family: 'Open Sans', sans-serif;font-size:20px">Welcome to the pitches Thrills,
+            you have less than a minute to write your new pitch to
+            impress users, users will have to vote your pitch and also leaving comments.</p>
+    </div> <br>
+    <div>
+        <a href="{{url_for('main.new_pitch')}}" class="btn btn-success btn-center -center"
+            style="  margin: 0;position: absolute;top: 35%;left: 50%;-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);font-family: 'Open Sans', sans-serif;">
+            Add new Pitch</a>
+    </div>
+</div>
+<div class="container">
+    <h4
+        style="text-align:center;color:#ff6347;padding-top:5%;padding-bottom:3%;font-family: 'Open Sans', sans-serif;font-weight:900;">
+        Categories of Pitches</h4>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card ">
+                <div class="well well-lg p-2 imp" style="text-align: center;">
+                    <h3 style="font-family: 'Open Sans', sans-serif;color:#c2972c;">Sport Pitches</h3>
+                    <hr>
+                    <p style="font-family: 'Open Sans', sans-serif;font-size:18px"> A small explanation on what you
+                        understand in
+                        sports and for example may be football and the reason why you love football
+                    </p>
+                    <a href="{{url_for('main.sports')}}" class="btn btn-warning btn-center -center">
+                        check Pitch</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card ">
+                <div class="well well-lg p-2 imp" style="text-align: center;">
+                    <h3 style="font-family: 'Open Sans', sans-serif;color:#c2972c;">Business Pitches</h3>
+                    <hr>
+                    <p style="font-family: 'Open Sans', sans-serif;font-size:18px">Give pitches to help individual get
+                        ideas on how to
+                        start business and make it grow. </p>
+                    <a href="{{url_for('main.business')}}" class="btn btn-warning btn-center -center">
+                        check Pitch</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col-md-4">
+            <div class="card ">
+                <div class="well well-lg p-2 imp" style="text-align: center;">
+                    <h3 style="font-family: 'Open Sans', sans-serif;color: #C2972C;">Politics Pitches</h3>
+                    <hr>
+                    <p style="font-family: 'Open Sans', sans-serif;font-size:18px">Pitches to give ideas on how to
+                        analyse and even
+                        joining politics</p>
+                    <a href="{{url_for('main.politics')}}" class="btn btn-warning btn-center -center">
+                        check Pitch</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <footer class="page-footer">
+        <div class="" style="background-color: #031214; color:#fff; font-size:12pt; padding: 1%;">
+            <div class="footer-copyright text-center py-3">&#169;Copyright 2021: Benjamin Kipkorir
+            </div>
+        </div>
+    </footer>
+</div>
+{%endblock%}
+white_check_mark
+eyes
+raised_hands
+
+
+
+
+

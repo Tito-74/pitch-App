@@ -1,0 +1,42 @@
+{% macro displayPitches(pitches_list) %}
+    {% for pitch in pitches_list %}
+    <div class="movie-card">
+        <div class="card col-sm mt-2">
+            <div class="well well-lg p-5" style="text-align: left;">
+                <h3 style="font-weight: 900;">{{pitch.pitch_title}}</h3>
+                <p>{{pitch.pitch_comment|truncate(70)}}</p>
+                <p style="font-weight: 900; "><span>Posted on: {{pitch.posted.strftime('%d.%m.%Y')}} by :
+                </span> {{pitch.user.username}} <span>
+                    </span>
+                </p>
+                <div class="row">
+                    <div class="btn-group col-md-8">
+                        <a class="btn btn-success d-flex btn-center -center"
+                            href="">
+                        </a>
+                        <a class="btn btn btn-primary d-flex btn-center -center"
+                            href="">
+                        </a> <br>
+                    </div>
+                    <div class=col-md-6>
+                        <a href="{{url_for('main.post_comment',id=pitch.id)}}" class="btn btn-default btn-center -center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-pen-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001z" />
+                            </svg>Comment</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    {%endmacro%}
+    {%macro displayComments(comments_list)%}
+    {%for comment in comments_list%}
+    <div class="col-md-12">
+        <p>{{comment.comment_itself}}</p>
+        <h5>By : {{comment.user.username}}</h5>
+    </div>
+    {%endfor%}
+    {%endmacro%}

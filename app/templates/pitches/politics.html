@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro %}
+    {%block content%}
+    <div class="container">
+        <div class="card" style="width: 20rem;">
+            <div class="card-body ">
+            <h4 class="card-title" style="font-weight:900">{{title}}</h4>
+                {{macro.displayPitches(politics_pitch)}}
+            </div>
+        </div>
+    </div>
+    {%endblock%}
