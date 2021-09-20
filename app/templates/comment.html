@@ -5,11 +5,14 @@
 {{super()}}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}"/>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 {%endblock%}
 <script>
-    
+    $(document).ready(function(){
+        alert("hello welcome");
+    });
 </script>
 {%block content%}
 <h3 class="text-center text-uppercase" style="color:#cf3a15;font-family: 'Open Sans', sans-serif;">Comments</h3>
