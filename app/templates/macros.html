@@ -4,6 +4,7 @@
         <div class="card col-sm mt-2">
             <div class="well well-lg p-5" style="text-align: left;">
                 <h3 style="font-weight: 900;">{{pitch.pitch_title}}</h3>
+                <p>{{pitch.pitch_itself}}</p>
                 <p>{{pitch.pitch_comment|truncate(70)}}</p>
                 <p style="font-weight: 900; "><span>Posted on: {{pitch.posted.strftime('%d.%m.%Y')}} by :
                 </span> {{pitch.user.username}} <span>
@@ -11,10 +12,6 @@
                 </p>
                 <div class="row">
                     <div class="btn-group col-md-8">
-                        <!-- <i id="like" class="fa fa-thumbs-up" aria-hidden="true"></i>
-                        <span id='noOfLikes'></span>
-                        <i id="dislike" class="fa fa-thumbs-down" aria-hidden="true"></i>
-                        <span id='noOfDislikes'></span> -->
                      <br>
                     </div>
                     <div class=col-md-6>
