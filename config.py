@@ -5,7 +5,7 @@ class Config:
     General configuration parent class
     
     '''
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:2574@localhost/pitch'
+    
     SECRET_KEY = 'titokip'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     UPLOADED_PHOTOS_DEST ='app/static/photos'
@@ -37,8 +37,6 @@ class ProdConfig(Config):
     '''
     pass
 
-# class TestConfig(Config):
-#     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://postgres:postgres@localhost/watchlist_test'
 
 
 
@@ -50,7 +48,7 @@ class DevConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:2574@localhost/pitch'
     DEBUG = True
 
 
@@ -59,7 +57,7 @@ config_options = {
 
     'development':DevConfig,
     'production':ProdConfig,
-    # 'test':TestConfig
+  
 }    
 
 
