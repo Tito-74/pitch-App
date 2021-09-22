@@ -83,31 +83,5 @@ class Comments(db.Model):
         comment = Comments.query.order_by(
             Comments.time_posted.desc()).filter_by(pitches_id=id).all()
         return comment
-# class Role(db.Model):
-#     __tablename__ = 'roles'
 
-#     id = db.Column(db.Integer,primary_key = True)
-#     name = db.Column(db.String(255))
-#     users = db.relationship('User',backref = 'role',lazy = "dynamic")
-
-
-#     def __repr__(self):
-#         return f'User {self.name}' 
-
-# class Results(db.model):
-#     __tablename__='results'
-#     id = db.Column('id',db.integer, primary_key=True)
-#     vote = Column('data',db.integer)
-#     comments = Columns('text',db.String)
-
-#     @socketio.on('vote')
-#     def handleVote(ballot):
-#         vote = Resuls(vote = ballot)
-#         db.session.add(vote)
-#         db.session.commit()
-
-#         results1 = Results.query.filter_by(vote=1).count()
-#         results2 = Results.query.filter_by(vote=2).count()
-
-# # 
 
